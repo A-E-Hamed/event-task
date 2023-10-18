@@ -1,0 +1,19 @@
+.form{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .dataValidation{
+    margin-top: 10px;
+    color: red;
+  }
+
+  .form input{
+    border-radius: 7px;
+    padding-left: 7px;
+    padding-right: 7px;
+
+  }
+
+  

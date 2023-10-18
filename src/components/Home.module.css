@@ -1,0 +1,52 @@
+.container {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1)),
+    url("../../public/images/mainCover.jpg");
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+
+  color: wheat;
+}
+
+.container h1 {
+  margin: 0;
+  padding-top: 2.5rem;
+  text-align: center;
+}
+
+.content {
+  width: 40%;
+  padding: 0rem calc((110vw - 1300px) / 2);
+  margin-top: 5rem;
+}
+
+.content h2 {
+  font-size: xx-large;
+  box-shadow: 3px 5px grey;
+  padding-bottom: 1.5rem;
+}
+.content p {
+  font-size: larger;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  height: 40px;
+  align-items: center;
+  border-radius: 20px;
+  border-style: none;
+  background-color: #008CBA;    
+  color: wheat;
+  padding-left: 10px;
+  padding-right: 10px;
+
+}
+
+.button:hover {
+    background-color: #1613bd; /* Green */
+    color: white;
+    cursor: pointer;
+  }
+
+ 

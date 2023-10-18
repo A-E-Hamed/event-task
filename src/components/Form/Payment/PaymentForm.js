@@ -1,6 +1,7 @@
 import styles from './PaymentForm.module.css';
 
-const PaymentForm = ({ paymentSubmited, handlePaymentSubmit, handleSubmit }) => {
+const PaymentForm = ({ paymentSubmited, handlePaymentSubmit, handleSubmit , onClose}) => {
+  console.log(onClose);
     return (
       <div>
         <h2>Pay Here</h2>
@@ -11,7 +12,7 @@ const PaymentForm = ({ paymentSubmited, handlePaymentSubmit, handleSubmit }) => 
               id="payment"
               onChange={handlePaymentSubmit}
             />
-            Please Check The Box To Pay
+            Please Check The Box To Confirm Your Payment Method
           </label>
         </div>
         
@@ -20,8 +21,9 @@ const PaymentForm = ({ paymentSubmited, handlePaymentSubmit, handleSubmit }) => 
             className={styles.button}
             onClick={handleSubmit}
           >
-            Reserve Your Ticket
+            Buy Now
           </button>
+          <button onClick={onClose} className={styles.button}>Exit</button>
         
       </div>
     );

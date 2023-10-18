@@ -67,8 +67,9 @@ const InformationForm = ({ formData, setFormData, handlePayment }) => {
           </div>
         </div>
         <button type="button" onClick={handlePayment} className={styles.button}>
-          Submit
+          Buy Now
         </button>
+        <button className={styles.button}>Exit</button>
       </form>
     </div>
   );

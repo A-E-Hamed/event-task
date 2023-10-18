@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import styles from "./FormContent.module.css";
-import PaymentForm from "../Payment/PaymetForm";
+import PaymentForm from "../Payment/PaymentForm";
 import InformationForm from "../PersonalInformation/InformationForm";
 import FormDataDisplay from "../../DataDisplay/FormDataDisplay";
 
-const FormContent = () => {
+const FormContent = (props) => {
   const [openPaymentForm, setOpenPaymentForm] = useState(false);
   const [dataValidation, setDataValidation] = useState(false);
   const [paymentSubmitted, setPaymentSubmitted] = useState(false);
@@ -16,6 +16,8 @@ const FormContent = () => {
     oct25: false,
     oct26: false,
   });
+  
+  
 
   const handlePayment = () => {
     if (formData.name && formData.email && (formData.oct25 || formData.oct26)) {
@@ -47,16 +49,18 @@ const FormContent = () => {
           paymentSubmitted={paymentSubmitted}
           handlePaymentSubmit={handlePaymentSubmit}
           handleSubmit={handleSubmit}
+          onClose = {props.onClose}
         />
       ) : (
         <InformationForm
           formData={formData}
           setFormData={setFormData}
           handlePayment={handlePayment}
+          onClose = {props.onClose}
         />
       )}
       {dataValidation && <div className={styles.dataValidation}>Please enter all required fields.</div>}
-      {formDataDisplay && <FormDataDisplay formData={formDataDisplay} />}
+      {formDataDisplay && <FormDataDisplay formData={formDataDisplay} onClose = {props.onClose} />}
     </div>
   );
 };

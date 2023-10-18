@@ -31,7 +31,7 @@ const Home = () => {
         </button>
         {openForm && (
           <Modal onClose={closeFormHandler}>
-            <FormContent />
+            <FormContent onClose = {closeFormHandler} />
           </Modal>
         )}
       </div>

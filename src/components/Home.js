@@ -27,7 +27,7 @@ const Home = () => {
           scrambled it to make a type specimen book.
         </p>
         <button className={styles.button} onClick={openFormHandler}>
-          Reserve Now
+          Get Your Ticket
         </button>
         {openForm && (
           <Modal onClose={closeFormHandler}>

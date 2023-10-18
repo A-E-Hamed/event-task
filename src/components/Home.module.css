@@ -36,17 +36,14 @@
   align-items: center;
   border-radius: 20px;
   border-style: none;
-  background-color: #008CBA;    
+  background-color: #008cba;
   color: wheat;
   padding-left: 10px;
   padding-right: 10px;
-
 }
 
 .button:hover {
-    background-color: #1613bd; /* Green */
-    color: white;
-    cursor: pointer;
-  }
-
- 
+  background-color: #1613bd;
+  color: white;
+  cursor: pointer;
+}

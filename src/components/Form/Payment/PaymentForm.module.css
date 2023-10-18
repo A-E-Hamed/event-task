@@ -20,7 +20,7 @@
 }
 
 .button:hover {
-  background-color: #1613bd; /* Green */
+  background-color: #1613bd;
   color: white;
   cursor: pointer;
 }

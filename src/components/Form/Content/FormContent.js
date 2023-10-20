@@ -26,9 +26,6 @@ const FormContent = (props) => {
     }
   };
 
-  const handlePaymentSubmit = () => {
-    setPaymentSubmitted(true);
-  };
 
   const handleSubmit = (event) => {
     if (paymentSubmitted) {
@@ -43,7 +40,6 @@ const FormContent = (props) => {
       {openPaymentForm ? (
         <PaymentForm
           paymentSubmitted={paymentSubmitted}
-          handlePaymentSubmit={handlePaymentSubmit}
           handleSubmit={handleSubmit}
           onClose = {props.onClose}
           formData={formData}

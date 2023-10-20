@@ -1,20 +1,28 @@
-import React, { useState } from 'react';
-import FormDataDisplay from '../../DataDisplay/FormDataDisplay';
-import styles from './PaymentForm.module.css';
+import React, { useState } from "react";
+import FormDataDisplay from "../../DataDisplay/FormDataDisplay";
+import styles from "./PaymentForm.module.css";
 
-const PaymentForm = ({ paymentSubmitted, handleSubmit, formData, onClose }) => {
+const PaymentForm = ({ formData, onClose }) => {
   const [formReady, setFormReady] = useState(false);
+  const [paymentSubmitted, setPaymentSubmitted] = useState(false);
+  const [dataValidation, setDataValidation] = useState(false);
+
 
   const handleCheckboxChange = (event) => {
     setFormReady(event.target.checked);
   };
 
+  const handleSubmit = () => {
+    // Do somthing with DB
+    setPaymentSubmitted(true);
+  };
+
   const handleBuyNowClick = () => {
     if (formReady) {
       handleSubmit();
+      setDataValidation(false);
     } else {
-      
-      console.log("Please check the checkbox to confirm your payment method.");
+      setDataValidation(true);
     }
   };
 
@@ -43,10 +51,18 @@ const PaymentForm = ({ paymentSubmitted, handleSubmit, formData, onClose }) => {
           >
             Buy Now
           </button>
-          <button onClick={onClose} className={styles.button}>Exit</button>
+          <button onClick={onClose} className={styles.button}>
+            Exit
+          </button>
         </>
       )}
+      {dataValidation && (
+        <div className={styles.dataValidation}>
+          Please enter all required fields.
+        </div>
+      )}
     </div>
+    
   );
 };
 
